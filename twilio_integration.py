@@ -8,16 +8,13 @@ from dotenv import load_dotenv
 load_dotenv()
 
 message = Mail(
-    from_email='indrasena.pr@gmail.com',
+    from_email='flipprlights@outlook.com',
     to_emails='anish.susarla@gmail.com',
     subject='Flippr Notification',
-    html_content='<strong>Energy usage too high. Please turn off your lights.</strong>')
+    html_content='<strong>Energy usage too high. Please turn off your lights. Please include yes in the subject line if you would like us to turn off the lights for you, and no otherwise.</strong>')
 try:
     sg = SendGridAPIClient(os.environ['SENDGRID_API_KEY'])
     response = sg.send(message)
-    print(response.status_code)
-    print(response.body)
-    print(response.headers)
 except Exception as e:
     print("error")
     print(e.message)

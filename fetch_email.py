@@ -1,11 +1,14 @@
 import imaplib
 import email
 from email.header import decode_header
+import os
+
+load_dotenv()
 
 # IMAP server settings
 IMAP_SERVER = 'imap.outlook.com'
-EMAIL = 'flipprlights@outlook.com'
-PASSWORD = 'BTEHackathon123!'
+EMAIL = os.environ["FROM_EMAIL"]
+PASSWORD = os.environ["EMAIL_PWD"]
 
 # Connect to the IMAP server
 mail = imaplib.IMAP4_SSL(IMAP_SERVER)

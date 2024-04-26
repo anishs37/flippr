@@ -1,2 +1,3 @@
-# flippr
-Code and relevant files for BTE Hackathon 24
+# Flippr
+
+Automatically turning off classroom lights when no motion is detected to save energy at NYU Stern.
